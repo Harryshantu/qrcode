@@ -1,0 +1,8 @@
+<resources  xmlns:tools="http://schemas.android.com/tools"
+             tools:ignore="MissingTranslation" >
+    <string name="application_name">qrcode</string>
+    <string name="eset_acostcenter">ACostCenter</string>
+    <string name="eset_acostcenter_single">ACostCenterType</string>
+    <string name="eset_acostcentertext">ACostCenterText</string>
+    <string name="eset_acostcentertext_single">ACostCenterTextType</string>
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.acostcentertext.ACostCenterTextActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.api_costcenter_srv_entities.ACostCenterTextType" />
+        <variable name="aCostCenterTextType" type="ACostCenterTextType"/>
+        <variable name="handler" type="com.theektek.qrcode.mdui.acostcentertext.ACostCenterTextDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="CostCenter"
+            app:valueText="@{aCostCenterTextType.getOptionalValue(ACostCenterTextType.costCenter).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ControllingArea"
+            app:valueText="@{aCostCenterTextType.getOptionalValue(ACostCenterTextType.controllingArea).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Language"
+            app:valueText="@{aCostCenterTextType.getOptionalValue(ACostCenterTextType.language).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ValidityEndDate"
+            app:valueText="@{aCostCenterTextType.getOptionalValue(ACostCenterTextType.validityEndDate).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ValidityStartDate"
+            app:valueText="@{aCostCenterTextType.getOptionalValue(ACostCenterTextType.validityStartDate).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="CostCenterName"
+            app:valueText="@{aCostCenterTextType.getOptionalValue(ACostCenterTextType.costCenterName).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="CostCenterDescription"
+            app:valueText="@{aCostCenterTextType.getOptionalValue(ACostCenterTextType.costCenterDescription).toString()}" />
+
+        <RelativeLayout
+            style="@style/FioriButton.Flat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:onClick="@{handler::onNavigationClickedToACostCenter_to_CostCenter}"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/link_label_to_to_costcenter"
+                style="@style/FioriButton.Flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:focusable="false"
+                android:paddingLeft="16dp"
+                android:text="ACostCenter" />
+
+            <Button
+                android:id="@+id/link_button_to_to_costcenter"
+                style="@style/FioriButton.Flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:drawableStart="@drawable/ic_sap_icon_arrow_right"
+                android:enabled="true"
+                android:visibility="invisible"
+                android:focusable="false" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

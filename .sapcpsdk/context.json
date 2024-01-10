@@ -1,0 +1,16 @@
+{
+  "projectInfo": {
+    "projectName": "qrcode",
+    "createdDate": "Friday, January 5, 2024 at 1:33:38 PM",
+    "regenerateProxyClassDate": ""
+  },
+  "cloudApplication": {
+    "cloudApplicationId": "com.theektek.qrcode",
+    "destinations": [
+      {
+        "id": "CC_COSTCENTRE"
+      }
+    ]
+  },
+  "msServerConfigurationName": "PG"
+}

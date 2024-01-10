@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.acostcenter.ACostCenterActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.api_costcenter_srv_entities.ACostCenterType" />
+        <variable name="aCostCenterType" type="ACostCenterType"/>
+        <variable name="handler" type="com.theektek.qrcode.mdui.acostcenter.ACostCenterDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/item_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="ControllingArea"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.controllingArea).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CostCenter"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.costCenter).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="ValidityEndDate"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.validityEndDate).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="ValidityStartDate"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.validityStartDate).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CompanyCode"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.companyCode).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="BusinessArea"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.businessArea).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CostCtrResponsiblePersonName"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.costCtrResponsiblePersonName).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CostCtrResponsibleUser"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.costCtrResponsibleUser).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CostCenterCurrency"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.costCenterCurrency).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="ProfitCenter"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.profitCenter).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Department"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.department).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CostingSheet"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.costingSheet).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="FunctionalArea"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.functionalArea).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Country"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.country).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Region"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.region).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CityName"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.cityName).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CostCenterStandardHierArea"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.costCenterStandardHierArea).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CostCenterCategory"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.costCenterCategory).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="IsBlkdForPrimaryCostsPosting"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.isBlkdForPrimaryCostsPosting).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="IsBlkdForSecondaryCostsPosting"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.isBlkdForSecondaryCostsPosting).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="IsBlockedForRevenuePosting"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.isBlockedForRevenuePosting).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="IsBlockedForCommitmentPosting"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.isBlockedForCommitmentPosting).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="IsBlockedForPlanPrimaryCosts"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.isBlockedForPlanPrimaryCosts).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="IsBlockedForPlanSecondaryCosts"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.isBlockedForPlanSecondaryCosts).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="IsBlockedForPlanRevenues"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.isBlockedForPlanRevenues).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="ConsumptionQtyIsRecorded"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.consumptionQtyIsRecorded).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Language"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.language).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CostCenterCreatedByUser"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.costCenterCreatedByUser).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CostCenterCreationDate"
+                        app:valueText="@{aCostCenterType.getOptionalValue(ACostCenterType.costCenterCreationDate).toString()}" />
+
+                    <RelativeLayout
+                        style="@style/FioriButton.Flat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:onClick="@{handler::onNavigationClickedToACostCenterText_to_Text}"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/link_label_to_to_text"
+                            style="@style/FioriButton.Flat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:paddingLeft="16dp"
+                            android:text="ACostCenterText" />
+
+                        <Button
+                            android:id="@+id/link_button_to_to_text"
+                            style="@style/FioriButton.Flat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            android:drawableStart="@drawable/ic_sap_icon_arrow_right"
+                            android:enabled="true"
+                            android:visibility="invisible"
+                            android:focusable="false" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>
